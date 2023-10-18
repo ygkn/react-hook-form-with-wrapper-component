@@ -1,10 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+import { WhenThereIs } from "./WhenThereIs";
+import { WhenThereIsNot } from "./WhenThereIsNot";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <main>
+      <h2>あるとき</h2>
+      <WhenThereIs />
+      <h2>ないとき</h2>
+      <WhenThereIsNot />
+    </main>
+  </React.StrictMode>,
 );
